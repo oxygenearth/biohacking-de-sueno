@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reto 7 D&iacute;as de Biohacking del Sue&ntilde;o Reparador | Energ&iacute;a Profunda Sin Despertares</title>
+<meta name="description" content="Protocolo cient&iacute;fico de 7 d&iacute;as para eliminar los despertares nocturnos y recuperar energ&iacute;a real. Oferta limitada: $7 USD (antes $14).">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#05071a;
+    --bg-mid:#0d1230;
+    --bg-card:#141a3d;
+    --bg-card-hover:#1c2455;
+    --primary:#7c5cff;
+    --primary-2:#5b3df0;
+    --accent:#ffb547;
+    --accent-2:#ff8a3d;
+    --success:#22d3a3;
+    --danger:#ff5a7a;
+    --text:#eef1ff;
+    --text-soft:#b8bde0;
+    --border:rgba(255,255,255,.08);
+    --glow:0 0 40px rgba(124,92,255,.45);
+    --glow-accent:0 0 40px rgba(255,181,71,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg-deep);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(124,92,255,.25), transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(255,138,61,.15), transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(34,211,163,.1), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .container{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+  h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15;letter-spacing:-.01em}
+  h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:900}
+  h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;margin-bottom:1rem}
+  h3{font-size:1.3rem;font-weight:700}
+  p{color:var(--text-soft);font-size:1.05rem}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* ============ TOP BAR ============ */
+  .topbar{
+    background:linear-gradient(90deg,var(--accent-2),var(--accent));
+    color:#1a0f00;
+    text-align:center;
+    padding:10px 16px;
+    font-weight:700;
+    font-size:.95rem;
+    position:relative;z-index:10;
+  }
+  .topbar span{margin:0 6px}
+
+  /* ============ HERO ============ */
+  .hero{
+    padding:80px 0 100px;
+    position:relative;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:0;left:50%;transform:translateX(-50%);
+    width:800px;height:800px;
+    background:radial-gradient(circle, rgba(124,92,255,.18), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero > .container{position:relative;z-index:1}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(124,92,255,.15);
+    border:1px solid rgba(124,92,255,.4);
+    padding:8px 16px;border-radius:999px;
+    font-size:.85rem;font-weight:600;color:#c9bfff;
+    margin-bottom:24px;
+  }
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 10px var(--success);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero h1{max-width:950px;margin:0 auto}
+  .hero h1 .highlight{
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{font-size:1.25rem;max-width:780px;margin:24px auto 0;color:var(--text-soft)}
+
+  .hero-stats{
+    display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+    margin:40px auto 0;max-width:800px;
+  }
+  .stat{
+    text-align:center;
+    padding:16px 20px;
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--border);
+    border-radius:16px;
+    min-width:180px;
+    transition:transform .3s, border-color .3s;
+  }
+  .stat:hover{transform:translateY(-4px);border-color:var(--primary)}
+  .stat .num{
+    font-size:2.4rem;font-weight:900;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    display:block;line-height:1;
+  }
+  .stat .lbl{font-size:.85rem;color:var(--text-soft);margin-top:6px;display:block}
+
+  .hero-cta-wrap{margin-top:45px}
+  .btn-cta{
+    display:inline-block;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#1a0f00;
+    font-size:1.25rem;font-weight:800;
+    padding:20px 40px;border-radius:14px;border:none;cursor:pointer;
+    text-align:center;text-transform:uppercase;letter-spacing:.03em;
+    box-shadow:0 10px 30px rgba(255,138,61,.4), inset 0 -3px 0 rgba(0,0,0,.15);
+    transition:transform .2s, box-shadow .2s;
+    position:relative;overflow:hidden;
+  }
+  .btn-cta:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,138,61,.6), inset 0 -3px 0 rgba(0,0,0,.15)}
+  .btn-cta::after{
+    content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+    transition:left .6s;
+  }
+  .btn-cta:hover::after{left:100%}
+  .btn-cta small{display:block;font-size:.8rem;font-weight:600;margin-top:4px;opacity:.85;text-transform:none;letter-spacing:0}
+  .btn-cta.full{display:block;width:100%}
+
+  .hero-trust{
+    display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+    margin-top:20px;font-size:.85rem;color:var(--text-soft);
+  }
+  .hero-trust span{display:flex;align-items:center;gap:6px}
+  .hero-trust svg{flex-shrink:0}
+
+  /* ============ SECTIONS ============ */
+  section{padding:80px 0;position:relative}
+  .section-title{text-align:center;margin-bottom:50px}
+  .section-title .eyebrow{
+    display:inline-block;color:var(--accent);font-weight:700;
+    font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;
+  }
+  .section-title p{max-width:700px;margin:15px auto 0;font-size:1.1rem}
+
+  /* ============ PAIN POINTS ============ */
+  .pain-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;
+  }
+  .pain-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:18px;padding:28px;
+    transition:transform .3s, border-color .3s, background .3s;
+    cursor:default;
+  }
+  .pain-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--danger);
+    background:var(--bg-card-hover);
+  }
+  .pain-card .icon{
+    width:50px;height:50px;border-radius:12px;
+    background:linear-gradient(135deg,rgba(255,90,122,.2),rgba(255,90,122,.05));
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem;margin-bottom:16px;
+  }
+  .pain-card h3{margin-bottom:8px;color:#fff}
+
+  /* ============ OBJECTIVES GRID ============ */
+  .obj-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;
+  }
+  .obj-card{
+    position:relative;
+    background:linear-gradient(160deg,var(--bg-card),var(--bg-mid));
+    border:1px solid var(--border);
+    border-radius:20px;padding:28px;
+    transition:all .35s cubic-bezier(.2,.8,.2,1);
+    overflow:hidden;
+  }
+  .obj-card::before{
+    content:"";position:absolute;top:0;left:0;width:100%;height:3px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+    transform:scaleX(0);transform-origin:left;transition:transform .4s;
+  }
+  .obj-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    border-color:var(--primary);
+    box-shadow:var(--glow);
+  }
+  .obj-card:hover::before{transform:scaleX(1)}
+  .obj-day{
+    display:inline-block;
+    background:linear-gradient(135deg,var(--primary),var(--primary-2));
+    color:#fff;font-weight:800;font-size:.75rem;
+    padding:5px 12px;border-radius:999px;margin-bottom:14px;
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+  .obj-card h3{color:#fff;margin-bottom:8px;font-size:1.15rem}
+  .obj-card p{font-size:.95rem}
+  .obj-card .obj-icon{
+    position:absolute;top:20px;right:20px;
+    font-size:2rem;opacity:.15;transition:all .4s;
+  }
+  .obj-card:hover .obj-icon{opacity:.5;transform:rotate(-10deg) scale(1.2)}
+
+  /* ============ WHAT YOU GET ============ */
+  .includes-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;
+  }
+  .includes-list{list-style:none}
+  .includes-list li{
+    display:flex;gap:15px;padding:18px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .includes-list li:last-child{border-bottom:none}
+  .includes-list .check{
+    flex-shrink:0;width:32px;height:32px;border-radius:10px;
+    background:linear-gradient(135deg,var(--success),#12b886);
+    display:flex;align-items:center;justify-content:center;
+    color:#001a14;font-weight:900;
+  }
+  .includes-list strong{display:block;color:#fff;font-size:1.05rem;margin-bottom:2px}
+  .includes-list span{font-size:.9rem;color:var(--text-soft)}
+
+  .mockup{
+    background:linear-gradient(160deg,var(--bg-card),var(--bg-mid));
+    border:1px solid var(--border);
+    border-radius:24px;padding:40px;
+    text-align:center;
+    box-shadow:var(--glow);
+    position:relative;
+  }
+  .mockup .book{
+    width:220px;height:300px;margin:0 auto 20px;
+    background:linear-gradient(135deg,#1a1f45,#0d1230);
+    border-radius:6px 14px 14px 6px;
+    box-shadow:
+      -4px 0 0 #0a0e27,
+      -6px 0 0 #1a1f45,
+      0 20px 40px rgba(0,0,0,.5);
+    position:relative;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:20px;
+    transition:transform .5s;
+  }
+  .mockup:hover .book{transform:rotateY(-10deg) scale(1.03)}
+  .mockup .book::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--primary),var(--accent));
+  }
+  .mockup .book-title{
+    font-family:'Playfair Display',serif;
+    font-size:1.1rem;font-weight:900;color:#fff;text-align:center;line-height:1.2;
+  }
+  .mockup .book-sub{font-size:.7rem;color:var(--accent);margin-top:10px;letter-spacing:.1em;text-transform:uppercase}
+  .mockup .book-tag{
+    position:absolute;top:12px;right:-8px;
+    background:var(--accent);color:#1a0f00;
+    font-size:.7rem;font-weight:800;
+    padding:4px 10px;border-radius:4px;
+  }
+
+  /* ============ PRICE SECTION ============ */
+  .price-section{
+    background:linear-gradient(180deg,transparent,rgba(255,181,71,.05),transparent);
+  }
+  .price-wrap{
+    max-width:620px;margin:0 auto;
+    background:linear-gradient(160deg,var(--bg-card),var(--bg-mid));
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:40px;
+    box-shadow:var(--glow-accent);
+    position:relative;
+    overflow:hidden;
+  }
+  .price-wrap::before{
+    content:"";position:absolute;inset:-2px;border-radius:28px;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    z-index:-1;opacity:.4;filter:blur(20px);
+  }
+  .price-header{
+    text-align:center;margin-bottom:20px;
+  }
+  .price-header .eyebrow{
+    display:inline-block;color:var(--accent);font-weight:700;
+    font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;
+  }
+  .price-header h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:8px}
+  .price-tag{
+    display:flex;align-items:baseline;justify-content:center;gap:12px;margin:18px 0 6px;
+  }
+  .price-old{font-size:1.8rem;color:var(--text-soft);text-decoration:line-through;opacity:.6}
+  .price-new{font-size:4rem;font-weight:900;color:var(--accent);font-family:'Inter'}
+  .price-save{
+    display:inline-block;background:var(--danger);color:#fff;
+    padding:4px 12px;border-radius:999px;font-size:.8rem;font-weight:700;
+    margin-left:4px;
+  }
+  .price-sub{text-align:center;color:var(--text-soft);font-size:.95rem;margin-bottom:20px}
+  .price-features{
+    list-style:none;margin:20px 0;padding:20px;
+    background:rgba(0,0,0,.25);border-radius:14px;
+  }
+  .price-features li{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:8px 0;color:var(--text);font-size:.98rem;
+  }
+  .price-features li::before{content:"\2714";color:var(--success);font-weight:900;flex-shrink:0}
+  .countdown-box{
+    background:rgba(0,0,0,.35);
+    border:1px dashed rgba(255,181,71,.5);
+    border-radius:14px;
+    padding:18px;margin:22px 0;text-align:center;
+  }
+  .countdown-label{font-size:.85rem;color:var(--accent);font-weight:600;margin-bottom:10px;letter-spacing:.05em;text-transform:uppercase}
+  .countdown{display:flex;justify-content:center;gap:10px}
+  .countdown .unit{
+    background:linear-gradient(180deg,#1a1f45,#0d1230);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:12px 16px;min-width:70px;
+  }
+  .countdown .num{font-size:2rem;font-weight:900;color:var(--accent);font-family:'Inter';display:block}
+  .countdown .lbl{font-size:.7rem;color:var(--text-soft);text-transform:uppercase;letter-spacing:.08em}
+  .guarantee-mini{
+    display:flex;align-items:center;gap:10px;justify-content:center;
+    margin-top:18px;font-size:.85rem;color:var(--text-soft);
+  }
+  .guarantee-mini svg{flex-shrink:0}
+
+  /* ============ ORDER BUMP ============ */
+  .bump{
+    background:linear-gradient(135deg,rgba(124,92,255,.12),rgba(255,181,71,.08));
+    border:2px solid var(--primary);
+    border-radius:24px;padding:40px;
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+    position:relative;overflow:hidden;
+  }
+  .bump::before{
+    content:"RECOMENDADO";
+    position:absolute;top:18px;right:-40px;
+    background:var(--accent);color:#1a0f00;
+    padding:6px 50px;font-size:.75rem;font-weight:800;
+    transform:rotate(35deg);letter-spacing:.1em;
+  }
+  .bump h2{font-size:2rem}
+  .bump .bump-price{
+    display:flex;align-items:baseline;gap:12px;margin:16px 0;
+  }
+  .bump .bump-price .old{font-size:1.3rem;color:var(--text-soft);text-decoration:line-through}
+  .bump .bump-price .new{font-size:2.4rem;font-weight:900;color:var(--accent)}
+  .bump-features{list-style:none;margin:20px 0}
+  .bump-features li{padding:8px 0;display:flex;gap:10px;align-items:flex-start}
+  .bump-features li::before{content:"\2728";flex-shrink:0;color:var(--accent)}
+  .excel-preview{
+    background:#0a0e27;border:1px solid var(--border);border-radius:14px;
+    padding:20px;font-family:'Inter',monospace;font-size:.85rem;
+  }
+  .excel-preview .row{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+    padding:8px 0;border-bottom:1px solid var(--border);
+  }
+  .excel-preview .row.head{color:var(--accent);font-weight:700;border-bottom:2px solid var(--primary)}
+  .excel-preview .row .cell{padding:4px;border-radius:4px}
+  .excel-preview .cell.good{background:rgba(34,211,163,.15);color:var(--success)}
+  .excel-preview .cell.mid{background:rgba(255,181,71,.15);color:var(--accent)}
+  .excel-preview .cell.low{background:rgba(255,90,122,.15);color:var(--danger)}
+
+  /* ============ TESTIMONIALS ============ */
+  .testi-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;
+  }
+  .testi-card{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:20px;padding:30px;
+    position:relative;
+    transition:transform .3s, border-color .3s;
+  }
+  .testi-card:hover{transform:translateY(-5px);border-color:var(--accent)}
+  .testi-card .quote-mark{
+    position:absolute;top:-15px;left:25px;
+    font-family:'Playfair Display';font-size:4rem;color:var(--primary);
+    line-height:1;opacity:.5;
+  }
+  .testi-card p{color:var(--text);font-style:italic;font-size:1rem;margin-bottom:20px;position:relative;z-index:1}
+  .testi-author{display:flex;align-items:center;gap:12px}
+  .testi-avatar{
+    width:48px;height:48px;border-radius:50%;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:#fff;font-size:1.1rem;
+  }
+  .testi-author strong{display:block;color:#fff;font-size:.95rem}
+  .testi-author span{font-size:.8rem;color:var(--text-soft)}
+  .stars{color:var(--accent);margin-bottom:10px;letter-spacing:2px}
+
+  /* ============ FAQ ============ */
+  .faq{max-width:800px;margin:0 auto}
+  .faq-item{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-radius:14px;margin-bottom:12px;overflow:hidden;
+    transition:border-color .3s;
+  }
+  .faq-item.open{border-color:var(--primary)}
+  .faq-q{
+    padding:20px 24px;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    font-weight:600;color:#fff;font-size:1.05rem;
+    transition:background .3s;
+  }
+  .faq-q:hover{background:var(--bg-card-hover)}
+  .faq-q .arrow{
+    flex-shrink:0;width:28px;height:28px;border-radius:50%;
+    background:var(--primary);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .3s;font-size:.9rem;
+  }
+  .faq-item.open .arrow{transform:rotate(180deg)}
+  .faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .4s ease, padding .3s;
+    padding:0 24px;
+  }
+  .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
+  .faq-a p{color:var(--text-soft);font-size:.98rem}
+
+  /* ============ FINAL CTA ============ */
+  .final-cta{
+    background:linear-gradient(135deg,var(--bg-mid),var(--bg-card));
+    border:1px solid var(--border);
+    border-radius:30px;padding:60px 40px;text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .final-cta::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(255,181,71,.2), transparent 60%);
+  }
+  .final-cta > *{position:relative;z-index:1}
+  .final-cta h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:15px}
+  .final-cta .price-display{
+    display:flex;justify-content:center;align-items:baseline;gap:15px;margin:25px 0;
+  }
+  .final-cta .price-display .old{font-size:1.8rem;text-decoration:line-through;color:var(--text-soft)}
+  .final-cta .price-display .new{font-size:4rem;font-weight:900;color:var(--accent)}
+  .final-cta .btn-cta{max-width:500px;margin:20px auto 0}
+
+  /* ============ FLOATING GUARANTEE ============ */
+  .guarantee-float{
+    position:fixed;bottom:20px;left:20px;z-index:50;
+    background:linear-gradient(135deg,var(--success),#12b886);
+    color:#001a14;
+    padding:12px 18px;border-radius:14px;
+    display:flex;align-items:center;gap:10px;
+    box-shadow:0 10px 30px rgba(34,211,163,.35);
+    font-weight:700;font-size:.85rem;
+    max-width:220px;
+    animation:floatIn 1s .5s both;
+    cursor:pointer;
+    transition:transform .3s;
+  }
+  .guarantee-float:hover{transform:scale(1.05)}
+  .guarantee-float svg{flex-shrink:0}
+  @keyframes floatIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ============ STICKY MOBILE CTA ============ */
+  .mobile-cta{
+    display:none;
+    position:fixed;bottom:0;left:0;right:0;z-index:100;
+    background:rgba(5,7,26,.95);
+    backdrop-filter:blur(10px);
+    border-top:1px solid var(--border);
+    padding:12px 16px;
+    gap:12px;align-items:center;
+  }
+  .mobile-cta .info{flex:1}
+  .mobile-cta .info .timer{font-size:.75rem;color:var(--accent);font-weight:700;letter-spacing:.05em}
+  .mobile-cta .info .price{font-size:1.1rem;font-weight:800;color:#fff}
+  .mobile-cta .info .price s{color:var(--text-soft);font-weight:500;font-size:.85rem;margin-right:6px}
+  .mobile-cta .btn-cta{padding:14px 18px;font-size:.95rem;width:auto;white-space:nowrap}
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding:40px 0 100px;text-align:center;
+    border-top:1px solid var(--border);margin-top:60px;
+  }
+  footer p{font-size:.85rem;color:var(--text-soft);margin-bottom:8px}
+  footer a{color:var(--accent);text-decoration:underline}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .includes-grid{grid-template-columns:1fr}
+    .bump{grid-template-columns:1fr;padding:30px}
+    .bump::before{top:12px;right:-50px;font-size:.65rem;padding:4px 55px}
+    section{padding:60px 0}
+    .hero-stats{gap:16px}
+    .stat{min-width:140px;padding:12px 14px}
+    .stat .num{font-size:1.8rem}
+  }
+  @media (max-width:640px){
+    .mobile-cta{display:flex}
+    footer{padding-bottom:140px}
+    .guarantee-float{bottom:90px;left:12px;max-width:180px;font-size:.75rem;padding:10px 14px}
+    .hero{padding:50px 0 70px}
+    .final-cta{padding:40px 20px}
+    .final-cta .price-display .new{font-size:3rem}
+    .countdown .unit{min-width:55px;padding:10px 12px}
+    .countdown .num{font-size:1.5rem}
+    .price-wrap{padding:28px 20px}
+    .price-new{font-size:3rem}
+  }
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s, transform .8s}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  &oline; OFERTA FLASH &middot; <span id="topTimer">15:00</span> &middot; El precio vuelve a $14 USD
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="badge"><span class="dot"></span> Protocolo Cient&iacute;fico &middot; Edici&oacute;n 2026</div>
+    <h1>Despierta con <span class="highlight">energ&iacute;a profunda</span> y deja atr&aacute;s los despertares nocturnos para siempre</h1>
+    <p class="hero-sub">Sabemos que recuperar un sue&ntilde;o reparador puede ser un desaf&iacute;o, por eso hemos dise&ntilde;ado este protocolo directo a la soluci&oacute;n. En <strong style="color:#fff">7 d&iacute;as</strong> reprogramar&aacute;s tu sistema nervioso, tu entorno y tus h&aacute;bitos para dormir de corrido y amanecer con claridad mental.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="num">7</span>
+        <span class="lbl">D&iacute;as de protocolo</span>
+      </div>
+      <div class="stat">
+        <span class="num">11</span>
+        <span class="lbl">Microprotocolos</span>
+      </div>
+      <div class="stat">
+        <span class="num">-40%</span>
+        <span class="lbl">Activaci&oacute;n simp&aacute;tica</span>
+      </div>
+      <div class="stat">
+        <span class="num">0</span>
+        <span class="lbl">Despertares nocturnos</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-wrap">
+      <a href="#precio" class="btn-cta">
+        &iexcl;Quiero mi descuento!
+        <small>Ver oferta por tiempo limitado</small>
+      </a>
+      <div class="hero-trust">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3a3" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Acceso inmediato</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3a3" stroke-width="2.5"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg> Garant&iacute;a 7 d&iacute;as</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3a3" stroke-width="2.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg> Pago 100% seguro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">&iquest;Te suena familiar?</span>
+      <h2>La epidemia del sue&ntilde;o roto</h2>
+      <p>El 62% de los adultos se despierta entre 4 y 6 veces por noche. No es &quot;mala suerte&quot;: es un sistema nervioso desregulado que puede hackearse.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+  <div class="icon">&#x1F319;</div>
+  <h3>Te despiertas a las 3 AM</h3>
+        <p>Tu mente se activa como si un interruptor interno se hubiera encendido. Miras el reloj y la ansiedad se dispara.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon">&#x1F50B;</div>
+        <h3>Cansancio cr&oacute;nico</h3>
+        <p>Despiertas sin haber descansado. La cafe&iacute;na ya no funciona y la niebla mental te acompa&ntilde;a todo el d&iacute;a.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon">&#x1F50B;</div>
+        <h3>Dopamina digital</h3>
+        <p>Revisas el tel&eacute;fono antes de dormir y tu cerebro entra en modo &quot;caza&quot;. El cortisol no te deja apagar.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="icon">&target;</div>
+        <h3>Energ&iacute;a inconsistente</h3>
+        <p>Un d&iacute;a amaneces bien, al siguiente est&aacute;s destruido. No hay patr&oacute;n, no hay control, no hay predictibilidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVES BY DAY -->
+<section style="background:linear-gradient(180deg,transparent,rgba(124,92,255,.05),transparent)">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">El protocolo d&iacute;a por d&iacute;a</span>
+      <h2>7 d&iacute;as, 7 pilares, 1 transformaci&oacute;n</h2>
+      <p>Cada d&iacute;a construye sobre el anterior. No necesitas implementar todo a la vez: el efecto compuesto hace el trabajo.</p>
+    </div>
+    <div class="obj-grid">
+      <div class="obj-card reveal">
+        <span class="obj-icon">&sung;</span>
+        <span class="obj-day">D&iacute;a 1</span>
+        <h3>Reset del sistema nervioso</h3>
+        <p>Respiraci&oacute;n 4-7-8 y termorregulaci&oacute;n r&aacute;pida para reducir activaci&oacute;n simp&aacute;tica en un 40%.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&starf;</span>
+        <span class="obj-day">D&iacute;a 2</span>
+        <h3>Entorno &oacute;ptimo de descanso</h3>
+        <p>Dormitorio m&aacute;s oscuro que una cueva, m&aacute;s fresco que un oto&ntilde;o, m&aacute;s silencioso que una biblioteca.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&female;</span>
+        <span class="obj-day">D&iacute;a 3</span>
+        <h3>Nutrici&oacute;n cronobiol&oacute;gica</h3>
+        <p>Ventana de ayuno nocturno, men&uacute; pre-sue&ntilde;o y suplementaci&oacute;n con magnesio glicinato.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&phone;</span>
+        <span class="obj-day">D&iacute;a 4</span>
+        <h3>Dopamina digital</h3>
+        <p>Toque de queda digital 60 min antes de dormir y estaci&oacute;n de carga fuera del dormitorio.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&#x1F9E0;</span>
+        <span class="obj-day">D&iacute;a 5</span>
+        <h3>Journaling nocturno</h3>
+        <p>M&eacute;todo &quot;brain dump&quot; de 10 minutos para descargar la mente y eliminar la rumiaci&oacute;n.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&searr;</span>
+        <span class="obj-day">D&iacute;a 6</span>
+        <h3>Microprotocolos anti-despertares</h3>
+        <p>Qu&eacute; hacer exactamente cuando te despiertas a mitad de noche sin activar el sistema de alerta.</p>
+      </div>
+      <div class="obj-card reveal">
+        <span class="obj-icon">&#127774;</span>
+        <span class="obj-day">D&iacute;a 7</span>
+        <h3>Energ&iacute;a matutina</h3>
+        <p>Rutina de los primeros 30 minutos: luz natural, hidrataci&oacute;n, movimiento y desayuno estrat&eacute;gico.</p>
+      </div>
+      <div class="obj-card reveal" style="background:linear-gradient(160deg,rgba(255,181,71,.15),rgba(124,92,255,.1));border-color:var(--accent)">
+        <span class="obj-icon">&#x2714;</span>
+        <span class="obj-day" style="background:linear-gradient(135deg,var(--accent),var(--accent-2))">Bonus</span>
+        <h3>Checklist + tabla de seguimiento</h3>
+        <p>Herramientas imprimibles para trackear tu progreso y consolidar los h&aacute;bitos ganadores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Qu&eacute; incluye</span>
+      <h2>Todo lo que recibes hoy</h2>
+    </div>
+    <div class="includes-grid">
+      <ul class="includes-list reveal">
+        <li>
+          <div class="check">&#x2714;</div>
+          <div>
+            <strong>eBook completo en PDF (Edici&oacute;n 2026)</strong>
+            <span>Protocolo de 7 d&iacute;as con base cient&iacute;fica en cronobiolog&iacute;a y neurociencia del descanso.</span>
+          </div>
+        </li>
+        <li>
+          <div class="check">&#x2714;</div>
+          <div>
+            <strong>Checklist diario imprimible</strong>
+            <span>11 protocolos trackeables que aumentan la adherencia en un 65%.</span>
+          </div>
+        </li>
+        <li>
+          <div class="check">&#x2714;</div>
+          <div>
+            <strong>Tabla de seguimiento de sue&ntilde;o y energ&iacute;a</strong>
+            <span>Escala de energ&iacute;a matutina del 1 al 10 con interpretaci&oacute;n personalizada.</span>
+          </div>
+        </li>
+        <li>
+          <div class="check">&#x2714;</div>
+          <div>
+            <strong>Gu&iacute;a de suplementaci&oacute;n estrat&eacute;gica</strong>
+            <span>Magnesio glicinato, L-teanina y melatonina en dosis fisiol&oacute;gicas.</span>
+          </div>
+        </li>
+        <li>
+          <div class="check">&#x2714;</div>
+          <div>
+            <strong>Acceso inmediato + actualizaciones gratis</strong>
+            <span>Descarga instant&aacute;nea y todas las futuras ediciones sin costo adicional.</span>
+          </div>
+        </li>
+      </ul>
+      <div class="mockup reveal">
+        <div class="book">
+          <span class="book-tag">2026</span>
+          <div class="book-title">Reto 7 D&iacute;as de Biohacking del Sue&ntilde;o Reparador</div>
+          <div class="book-sub">Energ&iacute;a Profunda &middot; Sin Despertares</div>
+        </div>
+        <p style="font-size:.9rem;color:var(--text-soft)">PDF de alta calidad &middot; Compatible con cualquier dispositivo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE SECTION -->
+<section id="precio" class="price-section">
+  <div class="container">
+    <div class="price-wrap reveal">
+      <div class="price-header">
+        <span class="eyebrow">&oline; Oferta por tiempo limitado</span>
+        <h2>Asegura tu acceso al protocolo completo</h2>
+      </div>
+
+      <div class="price-tag">
+        <span class="price-old">$14</span>
+        <span class="price-new">$7</span>
+        <span style="color:var(--text-soft);font-size:1rem">USD</span>
+        <span class="price-save">-40%</span>
+      </div>
+      <p class="price-sub">eBook PDF &middot; Acceso inmediato &middot; Garant&iacute;a 7 d&iacute;as</p>
+
+      <ul class="price-features">
+        <li>eBook completo con los 7 d&iacute;as del protocolo</li>
+        <li>Checklist diario imprimible de 11 h&aacute;bitos</li>
+        <li>Tabla de seguimiento de sue&ntilde;o y energ&iacute;a</li>
+        <li>Gu&iacute;a de suplementaci&oacute;n estrat&eacute;gica</li>
+        <li>Actualizaciones gratuitas de por vida</li>
+      </ul>
+
+      <div class="countdown-box">
+        <div class="countdown-label">&oline; La oferta termina en</div>
+        <div class="countdown" id="countdown">
+          <div class="unit"><span class="num" id="cd-min">15</span><span class="lbl">Min</span></div>
+          <div class="unit"><span class="num" id="cd-sec">00</span><span class="lbl">Seg</span></div>
+        </div>
+      </div>
+
+      <a href="#comprar" class="btn-cta full">
+        &iexcl;Quiero mi descuento!
+        <small>Acceso inmediato al eBook completo</small>
+      </a>
+
+      <div class="guarantee-mini">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3a3" stroke-width="2.5"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Garant&iacute;a de satisfacci&oacute;n de 7 d&iacute;as o te devolvemos tu dinero.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER BUMP: SUEÑOMETRICS PRO -->
+<section id="comprar" style="background:linear-gradient(180deg,transparent,rgba(255,181,71,.04),transparent)">
+  <div class="container">
+    <div class="bump reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--accent);font-weight:700;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase">&oline; Order Bump exclusivo</span>
+        <h2 style="margin-top:8px">Sue&ntilde;oMetrics Pro &middot; Dashboard Excel</h2>
+        <p style="margin-top:10px">Convierte la tabla est&aacute;tica del eBook en un <strong style="color:#fff">centro de comando digital</strong>. El Excel calcula autom&aacute;ticamente tu progreso, dibuja curvas de evoluci&oacute;n y te asigna un <strong style="color:var(--accent)">Score de Sue&ntilde;o (0-100)</strong>.</p>
+        <div class="bump-price">
+          <span class="old">$12</span>
+          <span class="new">$3</span>
+          <span style="color:var(--text-soft);font-size:.9rem">USD (pago &uacute;nico)</span>
+        </div>
+        <ul class="bump-features">
+          <li>3 hojas interconectadas con f&oacute;rmulas autom&aacute;ticas</li>
+          <li>Gr&aacute;ficos de energ&iacute;a, despertares y adherencia</li>
+          <li>Formato condicional (verde/amarillo/rojo)</li>
+          <li>Compatible con Excel, Google Sheets, LibreOffice y Numbers</li>
+        </ul>
+        <a href="#" class="btn-cta full" style="background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 10px 30px rgba(124,92,255,.4)">
+          S&iacute;, quiero el Dashboard por $3
+          <small>A&ntilde;adir al pedido actual</small>
+        </a>
+      </div>
+      <div class="excel-preview reveal">
+        <div class="row head">
+          <div class="cell">D&iacute;a</div><div class="cell">Horas</div><div class="cell">Despertares</div><div class="cell">Energ&iacute;a</div><div class="cell">Score</div>
+        </div>
+        <div class="row">
+          <div class="cell">Lun</div><div class="cell mid">6.2h</div><div class="cell low">4</div><div class="cell mid">5</div><div class="cell mid">58</div>
+        </div>
+        <div class="row">
+          <div class="cell">Mar</div><div class="cell mid">6.8h</div><div class="cell mid">2</div><div class="cell mid">7</div><div class="cell good">72</div>
+        </div>
+        <div class="row">
+          <div class="cell">Mi&eacute;</div><div class="cell good">7.4h</div><div class="cell good">1</div><div class="cell good">8</div><div class="cell good">85</div>
+        </div>
+        <div class="row">
+          <div class="cell">Jue</div><div class="cell good">7.6h</div><div class="cell good">0</div><div class="cell good">9</div><div class="cell good">94</div>
+        </div>
+        <div style="margin-top:15px;padding:12px;background:rgba(34,211,163,.1);border-radius:10px;border-left:3px solid var(--success)">
+          <div style="font-size:.75rem;color:var(--success);font-weight:700;letter-spacing:.08em">&nearr; TENDENCIA SEMANAL</div>
+          <div style="font-size:.9rem;color:#fff;margin-top:4px">Score promedio: <strong style="color:var(--accent)">77.2</strong> (+32% vs d&iacute;a 1)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Resultados reales</span>
+      <h2>Lo que dicen quienes ya completaron el reto</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="quote-mark">&quot;</div>
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>Llevaba 2 a&ntilde;os despert&aacute;ndome a las 3 AM con taquicardia. Al d&iacute;a 4 del reto, dorm&iacute; corrido por primera vez en meses. La t&eacute;cnica 4-7-8 y el toque de queda digital fueron game-changers.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div>
+            <strong>Mar&iacute;a R.</strong>
+            <span>Emprendedora &middot; 38 a&ntilde;os</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="quote-mark">&quot;</div>
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>Soy esc&eacute;ptico con estos temas, pero el protocolo est&aacute; muy bien fundamentado. El brain dump nocturno me elimin&oacute; la rumiaci&oacute;n mental. Mi energ&iacute;a matutina pas&oacute; de 4 a 8 en una semana.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JC</div>
+          <div>
+            <strong>Javier C.</strong>
+            <span>Ingeniero de software &middot; 42 a&ntilde;os</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="quote-mark">&quot;</div>
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>Lo que m&aacute;s me gust&oacute; es que no te pide cambiar todo de golpe. Cada d&iacute;a agregas un h&aacute;bito y se siente natural. El dashboard Excel me ayud&oacute; a ver la tendencia y no rendirme los primeros d&iacute;as.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LP</div>
+          <div>
+            <strong>Laura P.</strong>
+            <span>Madre de 2 &middot; 35 a&ntilde;os</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:linear-gradient(180deg,transparent,rgba(124,92,255,.04),transparent)">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">&iquest;En qu&eacute; formato recibo el eBook? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>Recibes un PDF de alta calidad compatible con cualquier dispositivo (computadora, tablet, celular). El acceso es inmediato tras la compra y puedes descargarlo las veces que necesites.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">&iquest;Necesito comprar suplementos o equipos especiales? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>No. El protocolo est&aacute; dise&ntilde;ado para funcionar con ajustes de entorno, h&aacute;bitos y t&eacute;cnicas gratuitas. Los suplementos (magnesio, L-teanina) son opcionales y est&aacute;n claramente marcados como tales.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">&iquest;Funciona si tengo insomnio cr&oacute;nico diagnosticado? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>El eBook es educativo y no sustituye atenci&oacute;n m&eacute;dica. Si tienes insomnio cr&oacute;nico, apnea o s&iacute;ndrome de piernas inquietas, consulta con un especialista. Dicho esto, muchos lectores con diagn&oacute;sticos previos han reportado mejoras significativas como complemento a su tratamiento.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">&iquest;Qu&eacute; es el Dashboard Sue&ntilde;oMetrics Pro? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>Es un archivo Excel (.xlsx) opcional de $5 que convierte la tabla de seguimiento del eBook en un centro de comando con gr&aacute;ficos autom&aacute;ticos, formato condicional y un Score de Sue&ntilde;o del 0 al 100. Compatible con Excel, Google Sheets, LibreOffice y Numbers.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">&iquest;Y si no me funciona? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>Tienes 7 d&iacute;as de garant&iacute;a. Si completas el protocolo y no sientes ninguna mejora, escríbenos y te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">&iquest;Por qu&eacute; el precio est&aacute; en oferta solo por hoy? <span class="arrow">&darr;</span></div>
+        <div class="faq-a"><p>Es una promoci&oacute;n de lanzamiento de la Edici&oacute;n 2026. El precio regular es $14 USD y volver&aacute; a ese valor cuando termine el contador. Aprovecha ahora para asegurar el descuento del 40%.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="container">
+    <div class="final-cta reveal">
+      <span class="eyebrow" style="color:var(--accent);font-weight:700;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase">&oline; &iexcl;Oferta termina pronto!</span>
+      <h2>El precio del eBook vuelve a $14 USD</h2>
+      <p style="max-width:600px;margin:15px auto 0;font-size:1.1rem">Asegura hoy tu acceso al protocolo completo por solo <strong style="color:var(--accent)">$7 USD</strong>. Ma&ntilde;ana puede ser demasiado tarde.</p>
+
+      <div class="countdown-box" style="max-width:400px;margin:30px auto">
+        <div class="countdown-label">La oferta termina en</div>
+        <div class="countdown">
+          <div class="unit"><span class="num" id="cd-min2">15</span><span class="lbl">Min</span></div>
+          <div class="unit"><span class="num" id="cd-sec2">00</span><span class="lbl">Seg</span></div>
+        </div>
+      </div>
+
+      <div class="price-display">
+        <span class="old">$14</span>
+        <span class="new">$7</span>
+        <span style="color:var(--text-soft);font-size:1.1rem">USD</span>
+      </div>
+
+      <a href="#" class="btn-cta">
+        &iexcl;Quiero mi descuento ahora!
+        <small>Acceso inmediato &middot; Garant&iacute;a 7 d&iacute;as</small>
+      </a>
+
+      <div class="guarantee-mini" style="margin-top:20px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3a3" stroke-width="2.5"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Pago 100% seguro &middot; Garant&iacute;a de 7 d&iacute;as &middot; Acceso inmediato</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p><strong style="color:#fff">Reto 7 D&iacute;as de Biohacking del Sue&ntilde;o Reparador y Energ&iacute;a Profunda Sin Despertares</strong></p>
+    <p>&copy; 2026 EliteHacks Editorial &middot; Todos los derechos reservados</p>
+    <p style="max-width:700px;margin:15px auto 0;font-size:.8rem">Este producto es informativo y educativo. No constituye asesor&iacute;a m&eacute;dica. Consulta con un profesional de la salud si presentas condiciones cr&oacute;nicas.</p>
+  </div>
+</footer>
+
+<!-- FLOATING GUARANTEE -->
+<div class="guarantee-float" title="Garant&iacute;a de 7 d&iacute;as">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#001a14" stroke-width="2.5"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+  <span>Garant&iacute;a 7 d&iacute;as o tu dinero de vuelta</span>
+</div>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-cta">
+  <div class="info">
+    <div class="timer">&oline; Termina en <span id="mobTimer">15:00</span></div>
+    <div class="price"><s>$14</s> $7 USD</div>
+  </div>
+  <a href="#precio" class="btn-cta">&iexcl;Lo quiero!</a>
+</div>
+
+<script>
+  // ============ COUNTDOWN 15 MIN ============
+  const TOTAL = 15 * 60;
+  const STORAGE_KEY = 'reto7_countdown_end';
+  let endTime = localStorage.getItem(STORAGE_KEY);
+  if (!endTime || parseInt(endTime) < Date.now()) {
+    endTime = Date.now() + TOTAL * 1000;
+    localStorage.setItem(STORAGE_KEY, endTime);
+  } else {
+    endTime = parseInt(endTime);
+  }
+
+  function updateCountdown() {
+    const now = Date.now();
+    let diff = Math.max(0, Math.floor((endTime - now) / 1000));
+    if (diff === 0) {
+      endTime = Date.now() + TOTAL * 1000;
+      localStorage.setItem(STORAGE_KEY, endTime);
+      diff = TOTAL;
+    }
+    const m = String(Math.floor(diff / 60)).padStart(2, '0');
+    const s = String(diff % 60).padStart(2, '0');
+    const formatted = `${m}:${s}`;
+
+    document.getElementById('cd-min').textContent = m;
+    document.getElementById('cd-sec').textContent = s;
+    document.getElementById('cd-min2').textContent = m;
+    document.getElementById('cd-sec2').textContent = s;
+    document.getElementById('topTimer').textContent = formatted;
+    document.getElementById('mobTimer').textContent = formatted;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ============ FAQ ACCORDION ============
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // ============ REVEAL ON SCROLL ============
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
